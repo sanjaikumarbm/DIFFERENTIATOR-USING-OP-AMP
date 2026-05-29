@@ -1,63 +1,52 @@
-# DIFFERENTIATOR-USING-OP-AMP
+# INTEGRATOR-USING-OP-AMP
 
-AIM:
-To design and test the performance of differentiator circuits using Op-amp.
+## AIM:
+To design and test the performance of integrator and differentiator circuits using Op-amp.
 
-APPARATUS REQUIRED:
-<img width="711" height="200" alt="image" src="https://github.com/user-attachments/assets/bb2d2881-17e3-4c7d-bbb1-ad332bbbc5c9" />
+## APPARATUS REQUIRED:
+<img width="700" height="201" alt="image" src="https://github.com/user-attachments/assets/7cbeb741-349e-43f5-a78f-312dd3f338b4" />
 
-THEORY:
-DIFFEERENTIATOR:
-The differentiator circuit performs the mathematical operation of differentiation; that is, the output waveform is the derivative of the input waveform. The differentiator may be constructed from a basic inverting amplifier if an input resistor R1 is replaced by a capacitor C1 . The expression for the output voltage is given as,
+## THEORY:
+## INTEGRATOR
+A circuit in which the output voltage waveform is the integral of the input voltage waveform is the integrator. Such a circuit is obtained by using a basic inverting amplifier configuration if the feedback resistor Rf is  replaced by a capacitor Cf .  The expression for the output voltage is given as,
 
-<img width="175" height="52" alt="image" src="https://github.com/user-attachments/assets/5577dd59-b261-43e8-852e-28c4a9bfea20" />
+<img width="166" height="35" alt="image" src="https://github.com/user-attachments/assets/340f2d59-4180-462c-882e-e3a211fdd4d9" />
 
-Here the negative sign indicates that the output voltage is 180 0 out of phase with the input signal. A resistor Rcomp = Rf is normally connected to the non-inverting input terminal of the op-amp to compensate for the input bias current. A workable differentiator can be designed by implementing the following steps:
-1.	Select fa equal to the highest frequency of the input signal to be differentiated. Then, assuming a value of C1 < 1 µF, calculate the value of Rf.
-2.	   Choose fb = 20 fa and calculate the values of R1 and Cf so that R1C1 = Rf Cf.
+Here the negative sign indicates that the output voltage is 180 0 out of phase with the input signal. Normally between fa and fb the circuit acts as an integrator. Generally, the value of fa < fb . The input signal will be integrated properly if the Time period T of the signal is larger than or equal to Rf Cf . That is,
 
-The differentiator is most commonly used in wave shaping circuits to detect high frequency components in an input signal and also as a rate–of–change detector in FM modulators.
+<img width="99" height="47" alt="image" src="https://github.com/user-attachments/assets/5924cac3-b14a-4af2-9e4c-1290887907e6" />
 
-DESIGN (DIFFERENTIATOR):
+The integrator is most commonly used in analog computers and ADC and signal-wave shaping circuits.
 
-Design an op-amp differentiator that will differentiate an input signal with fmax = 100HZ
-Select fa = fmax = 100 HZ = 1 / 2πRFC1
-Let C1 = 0.1μF
-Then RF = 1 / 2π(102)(10-7)
-                = 15.9KΩ
-Now choose fb = 10fa = 1 / 2πR1C1
-Therefore, R1 = 1 / 2π(103)(10-7)
-         		= 1.59KΩ
-Since RFCF = R1C1
-We get, CF = (1.59*103*10-7) / 15.9*103
-       = 0.01μF
+## DESIGN:
+To obtain the output of an Integrator circuit with component values R1Cf = 0.1ms , Rf = 10 R1 and Cf = 0.01 µF and also if 1 V peak square wave at 1000Hz is applied as input.
+We know the frequency at which the gain is 0 dB, fb = 1 / (2π R1 Cf) 
+	
 
-DIFFERENTIATOR  CIRCUIT DIAGRAM:
-<img width="759" height="414" alt="image" src="https://github.com/user-attachments/assets/ed2d11b0-7ae1-4526-b4f6-27014619c24a" />
+## INTEGRATOR CIRCUIT DIAGRAM:  
+<img width="698" height="423" alt="image" src="https://github.com/user-attachments/assets/4d02dde2-a299-4481-9c63-abee62084cce" />
 
-PROCEDURE:
+## PROCEDURE:
 1. Connections are given as per the circuit diagram
 2. + Vcc and - Vcc supply is given to the power supply terminal of the Op-Amp IC.
 3. By adjusting the amplitude and frequency knobs of the function generator, appropriate input voltage is applied to the inverting input terminal of the Op- Amp.
 4. The output voltage is obtained in the CRO and the input and output voltage waveforms are plotted in a graph sheet.
 
-MODEL GRAPH:  
-DIFFERENTIATOR          
-(i) SINE WAVE INPUT
-<img width="688" height="480" alt="image" src="https://github.com/user-attachments/assets/5a790cb8-1a8b-4990-b599-3c7680c24545" />
+## MODEL GRAPH:
+i)	SINE WAVE INPUT
+<img width="556" height="381" alt="image" src="https://github.com/user-attachments/assets/adeaae37-ac10-46c0-92b3-0397faca7165" />
 
-(ii) SQUARE WAVE INPUT
-<img width="757" height="447" alt="image" src="https://github.com/user-attachments/assets/3bb38583-c020-43ad-8b15-c03f1f545842" />
-
-TABULATION:
-<img width="1600" height="941" alt="image" src="https://github.com/user-attachments/assets/b25210d8-129e-48c2-8c14-7df89c06b4c1" />
+ii)  SQUARE WAVE INPUT
+<img width="847" height="553" alt="image" src="https://github.com/user-attachments/assets/ab1e5f5e-e1a5-47bf-affe-cc241b646aa5" />
 
 
-GRAPH:
-<img width="871" height="1280" alt="image" src="https://github.com/user-attachments/assets/dce5b458-649c-4065-bcc1-ba17c24dae5d" />
-<img width="864" height="1280" alt="image" src="https://github.com/user-attachments/assets/ad2527f6-1189-4d4a-845b-729bb5f7126b" />
+## TABULATION:
+![WhatsApp Image 2025-11-21 at 08 27 18_d1c60649](https://github.com/user-attachments/assets/141add1d-3321-400b-b80b-e725ff289e16)
 
 
-RESULT:
-<img width="1600" height="1181" alt="image" src="https://github.com/user-attachments/assets/90f93ed0-cdee-4aea-b170-243a556bae15" />
+## GRAPH:
+![WhatsApp Image 2025-11-21 at 08 27 31_ed383e2e](https://github.com/user-attachments/assets/ab2f3614-f241-492b-811e-7b8d6d5fc178)
 
+
+## RESULT:
+The integrator and differentiator circuits using the Op-amp were successfully designed and tested, producing the expected time-domain responses for integration and differentiation of the input signal.
